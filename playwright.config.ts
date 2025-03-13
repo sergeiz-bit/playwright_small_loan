@@ -34,10 +34,10 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-/*    {
+    {
       name: 'mobile-chromium',
       use: { ...devices['Galaxy S9+'] },
-    },*/
+    },
     {
       name: 'mobile-webkit',
       use: { ...devices['iPhone 15 Pro'] },

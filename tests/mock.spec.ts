@@ -16,7 +16,7 @@ test.describe("Loan app mock tests", async () => {
             })
         })
         const responsePromise = page.waitForResponse("**/api/loan-calc*");
-        await page.goto('http://localhost:3000/small-loan')
+        await smallLoanPage.open();
         await responsePromise;
         await smallLoanPage.checkMonthlyAmount(expectedMonthlyAmount)
 
