@@ -24,9 +24,8 @@ test.describe("Loan app mock tests", async () => {
         const smallLoanPage = new SmallLoanPage(page);
         await page.route("**/api/loan-calc*", async (request) => {
 
-            const responseBody = {}
             await request.fulfill({
-                status: 500, contentType: "application/json", body: JSON.stringify(responseBody)
+                status: 500, contentType: "application/json"
             })
         })
         const responsePromise = page.waitForResponse("**/api/loan-calc*");
@@ -39,9 +38,8 @@ test.describe("Loan app mock tests", async () => {
         const smallLoanPage = new SmallLoanPage(page);
         await page.route("**/api/loan-calc*", async (request) => {
 
-            const responseBody = {}
             await request.fulfill({
-                status: 200, contentType: "application/json", body: JSON.stringify(responseBody)
+                status: 200, contentType: "application/json"
             })
         })
         const responsePromise = page.waitForResponse("**/api/loan-calc*");
